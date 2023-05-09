@@ -1,0 +1,249 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Syne", "Poppins", sans-serif;
+  /* font-family: 'Lora', serif; */
+  /* font-family: 'Raleway'; */
+}
+
+body {
+  margin: 6rem 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.section-1 {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+}
+.left-1 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.left-1 img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.left-2 {
+  width: 70%;
+}
+
+.left-2 img {
+  height: 559.59px;
+  object-fit: cover;
+}
+.section-2 {
+  /* border: 1px solid rgb(17, 0, 255); */
+  width: 35%;
+}
+.space {
+  /* border: 2px solid rgb(51, 255, 0); */
+  width: 74%;
+  height: 100%;
+}
+
+.top h1 {
+  width: 292px;
+  height: 27px;
+  font-style: normal;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #1d1f22;
+}
+
+.top p {
+  position: absolute;
+  width: 292px;
+  height: 27px;
+  /* left: 929px; */
+  top: 180px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #1d1f22;
+}
+
+form {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+form h2 {
+  width: 38px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  height: 18px;
+  color: #1d1f22;
+  margin-bottom: -16px;
+}
+
+.rad label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.radi label {
+  line-height: 0px;
+  cursor: pointer;
+  width: 0%;
+}
+
+label span {
+  width: 70px;
+  height: 50px;
+  background-color: #eee;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: -29px;
+  justify-content: center;
+  align-content: center;
+  padding-top: 14px;
+}
+
+label input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+label input[type="checkbox"]:checked + span {
+  background-color: black;
+  color: white;
+}
+.color-box {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-right: 20px;
+}
+.color-box1 {
+  width: 36px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 48px;
+  position: absolute;
+  top: 395px;
+  right: 402px;
+  background-color: #d3d2d5;
+  background: #d3d2d5;
+}
+
+.color-box2 {
+  width: 36px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 20px;
+  background-color: rgb(8, 8, 8);
+  position: absolute;
+  top: 395px;
+  right: 389px;
+}
+.color-box3 {
+  width: 36px;
+  height: 32px;
+  display: inline-block;
+  background-color: #0f6450;
+  position: absolute;
+  top: 395px;
+  right: 368px;
+}
+.color-box.selected {
+  border: 2px solid #000;
+}
+.color-box1.selected {
+  border: 2px solid #5ece7b;
+}
+
+.color-box3.selected {
+  border: 2px solid #f045d3;
+}
+
+.color-box2.selected {
+  border: 2px solid green;
+}
+
+.radi {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 12px 19px;
+}
+
+.radi input {
+  border: 2px solid red;
+}
+
+form p {
+  position: absolute;
+  width: 86px;
+  height: 46px;
+  top: 494px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #1d1f22;
+}
+
+.space form button {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px;
+  position: absolute;
+  width: 23%;
+  height: 54px;
+  top: 472px;
+  border: none;
+  background: #5ece7b;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+ .bottom{
+    position: absolute;
+    /* width: 292px; */
+    width: 23%;
+    height: 103px;
+    /* left: calc(50% - 292px/2 + 355px); */
+    bottom: -120px;
+    /* top: 4rem; */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 159.96%;
+    color: #1D1F22;
+  }

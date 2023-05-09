@@ -1,0 +1,125 @@
+<body>
+  <div class="section-1">
+    <div class="left-1">
+      <ng-container *ngFor="let detail of cart; let i = index">
+        <section>
+          <div class="wrapper">
+            <div class="image-container">
+              <img src="/assets/{{ detail.image }}" alt="" />
+            </div>
+            <p>{{ detail.text }}</p>
+            <h4>{{ detail.amount }}</h4>
+          </div>
+        </section>
+      </ng-container>
+    </div>
+    <div class="left-2">
+      <img src="/assets/Image1.png" alt="" />
+    </div>
+  </div>
+  <div class="section-2">
+    <div class="space">
+      <div class="top">
+        <h1>Apollo</h1>
+        <p>Running Short</p>
+      </div>
+      <form #sizeForm="ngForm" (ngSubmit)="onSubmit(sizeForm.value)">
+        <div class="rad">
+          <h2>SIZE:</h2>
+          <label>
+            <input
+              type="checkbox"
+              name="size"
+              value="XS"
+              [(ngModel)]="selectedSize.XS"
+            />
+            <span>XS</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="size"
+              value="S"
+              [(ngModel)]="selectedSize.S"
+            />
+            <span>S</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="size"
+              value="M"
+              [(ngModel)]="selectedSize.M"
+            />
+            <span>M</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="size"
+              value="L"
+              [(ngModel)]="selectedSize.L"
+            />
+            <span>L</span>
+          </label>
+        </div>
+        <h2>COLOR:</h2>
+        <div class="radi">
+          <label>
+            <!-- <span>Color:</span> -->
+            <input
+              type="radio"
+              name="color"
+              value="grey"
+              [(ngModel)]="selectedColor"
+              (ngModelChange)="updateSizeBoxColor()"
+            />
+            <div
+              class="color-box1"
+              [ngClass]="{ selected: selectedColor === 'grey' }"
+            ></div>
+          </label>
+          <label>
+            <!-- <span></span> -->
+            <input
+              type="radio"
+              name="color"
+              value="black"
+              [(ngModel)]="selectedColor"
+              (ngModelChange)="updateSizeBoxColor()"
+            />
+            <div
+              class="color-box2"
+              [ngClass]="{ selected: selectedColor === 'black' }"
+            ></div>
+          </label>
+          <label>
+            <!-- <span></span> -->
+            <input
+              type="radio"
+              name="color"
+              value="green"
+              [(ngModel)]="selectedColor"
+              (ngModelChange)="updateSizeBoxColor()"
+            />
+            <!-- <div class="check"></div> -->
+            <div
+              class="color-box3"
+              [ngClass]="{ selected: selectedColor === 'green' }"
+            ></div>
+          </label>
+        </div>
+        <div>
+          <h2>PRICE:</h2>
+          <p>$50.00</p>
+        </div>
+        <button type="submit" routerLink="/product-cart">add to cart</button>
+      </form>
+      <p class="bottom">
+        Find stunning women's cocktail dresses and party dresses. Stand out in
+        lace and metallic cocktail dresses and party dresses from all your
+        favorite brands.
+      </p>
+    </div>
+  </div>
+</body>

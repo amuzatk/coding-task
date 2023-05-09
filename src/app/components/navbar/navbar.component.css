@@ -1,0 +1,192 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  /* font-family: "Raleway"; */
+    /* font-family: "Syne", "Poppins", sans-serif; */
+}
+
+header {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* padding: 1rem 4rem; */
+  padding-top: 18px;
+  padding-left: 3rem;
+  position: relative;
+
+}
+
+nav {
+  flex: 1;
+  /* border: 1px solid blue; */
+}
+
+.right-1 {
+  /* border: 1px solid black; */
+  flex: 2;
+  position: relative;
+  /* left: 0rem; */
+  /* display: flex; */
+  /* flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  gap: 35rem; */
+  margin-right: 2rem;
+}
+
+.right-1 .icon {
+    /* border: 1px solid black; */
+   position: absolute;
+   left: 11rem;
+   /* position: relative; */
+  }
+
+nav > ul {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+}
+
+nav > ul > li a {
+  text-decoration: none;
+  width: 65px;
+  height: 20px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  /* color: red; */
+  /* color: #5ECE7B; */
+}
+
+nav li:first-child a {
+  border-bottom: 2px solid #5ece7b;
+  padding-bottom: 2rem;
+  color: #5ece7b;
+}
+
+/* nav li a:hover:not(:first-child),
+  nav li a.active {
+  border-bottom: 2px solid  #5ECE7B;
+} */
+
+/* nav li a:hover:first-child, nav li a.active {
+    border-bottom: none;
+  } */
+
+nav li a:hover,
+nav li a.active {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #5ece7b;
+  color: #5ece7b;
+}
+
+/* ul {
+    border: 1px solid red;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  } */
+
+  .select-wrapper {
+    position: relative;
+    border: none;
+  }
+
+  .right-2 {
+    /* border: 1px solid rgb(224, 39, 39); */
+    /* flex: 2; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content:center; */
+    /* align-items: center; */
+    gap: 2rem;
+    /* width: 10%; */
+    position: absolute;
+    left: 44rem;
+  }
+
+  /* .dropdown-icon.pi-chevron-up {
+    transform: rotate(180deg);
+  }
+  .dropdown-icon {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #333 transparent transparent transparent;
+  } */
+
+  .currency-options{
+    /* border: 1px solid rgb(0, 0, 0); */
+    position: absolute;
+
+  }
+  .currency-options li{
+list-style: none;
+  }
+
+    .currency-symbol{
+/* border: 1px solid rgb(202, 25, 25); */
+width: 17px;
+height: 39px;
+/* font-family: 'Raleway'; */
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 160%;
+display: flex;
+align-items: center;
+color: #1D1F22;
+letter-spacing:normal;
+    }
+  
+  .select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg"); */
+    background-position: right center;
+    background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    padding-right: 32px;
+    /* border: 1px solid rgb(0, 255, 0); */
+  }
+  
+  .select-wrapper .dropdown-icon {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 65%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    /* color: record.quantity < '0' ? 'red' : '#171717', */
+    /* background-image: url("/assets/Dropdown.png"); */
+    /* background-image: url("/assets/UpArrow.png"); */
+    /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 8px 8px; */
+  }
+  
+  .select-wrapper.open select {
+    border: 1px solid rgb(4, 0, 255);
+    background-image: url("/assets/UpArrow.png");
+    /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_up_24px.svg"); */
+    /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_up_24px.svg"); */
+  }

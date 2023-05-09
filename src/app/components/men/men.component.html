@@ -1,0 +1,16 @@
+<body>
+    <h1>Category name</h1>
+    <main>
+      <ng-container *ngFor="let detail of cart">
+        <section>
+          <div class="wrapper">
+            <div class="image-container" >
+              <img src="/assets/{{detail.image}}" alt="">
+            </div>
+            <p>{{detail.text}}</p>
+            <h4>{{detail.amount}}</h4>
+          </div>
+        </section>
+      </ng-container>
+    </main>
+  </body>

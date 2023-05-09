@@ -1,0 +1,27 @@
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Women</a></li>
+      <li><a routerLink="/men">Men</a></li>
+      <li><a routerLink="/kids">Kids</a></li>
+    </ul>
+  </nav>
+  <div class="right-1">
+    <img class="icon" src="/assets/Icon1.png" alt="" />
+    <div class="right-2 select-wrapper">
+      <div class="select-container" [class.open]="selectOpen">
+        <div class="selected-currency" (click)="toggleSelect()">
+          <span class="currency-symbol">{{ selectedCurrency.symbol || '$' }}</span>
+          <i class="dropdown-icon pi" [ngClass]="{ 'pi-chevron-down': !selectOpen, 'pi-chevron-up': selectOpen }"></i>
+        </div>
+        <ul class="currency-options" *ngIf="selectOpen">
+          <li *ngFor="let currency of currencies" [class.selected]="selectedCurrency.code === currency" (click)="selectCurrency(currency)">
+            <span class="currency-symbol">{{ currency }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <img  src="/assets/Cart4.png" alt="" />
+    </div>      
+  </div>
+</header>
