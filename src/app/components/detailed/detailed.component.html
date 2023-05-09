@@ -1,27 +1,23 @@
 <body>
   <div class="section-1">
     <div class="left-1">
-      <ng-container *ngFor="let detail of cart; let i = index">
         <section>
           <div class="wrapper">
             <div class="image-container">
-              <img src="/assets/{{ detail.image }}" alt="" />
+              <img src="/assets/{{ selectedProduct.image }}" alt="Product Image" *ngFor="let i of [0, 1, 2]"/>
             </div>
-            <p>{{ detail.text }}</p>
-            <h4>{{ detail.amount }}</h4>
           </div>
         </section>
-      </ng-container>
     </div>
     <div class="left-2">
-      <img src="/assets/Image1.png" alt="" />
+      <img src="/assets/{{ selectedProduct.image }}" alt="" />
     </div>
   </div>
   <div class="section-2">
     <div class="space">
       <div class="top">
-        <h1>Apollo</h1>
-        <p>Running Short</p>
+        <h1>{{ selectedProduct.text.split(' ')[0] }}</h1>
+        <p>{{ selectedProduct.text.split(' ').slice(1).join(' ') }}</p>
       </div>
       <form #sizeForm="ngForm" (ngSubmit)="onSubmit(sizeForm.value)">
         <div class="rad">
@@ -111,7 +107,7 @@
         </div>
         <div>
           <h2>PRICE:</h2>
-          <p>$50.00</p>
+          <p>{{ selectedProduct.amount }}</p>
         </div>
         <button type="submit" routerLink="/product-cart">add to cart</button>
       </form>

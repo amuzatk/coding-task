@@ -67,7 +67,7 @@ export class DetailedComponent implements OnInit {
   getItemById(id: string): void {
     this.cartServiceService.getCartItemById(id).subscribe((item: any) => {
       this.selectedProduct = item;
-      // console.log(item);
+      console.log(item);
     });
   }
   // onCheckboxChange(event: any) {
