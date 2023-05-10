@@ -62,7 +62,6 @@
         <h2>COLOR:</h2>
         <div class="radi">
           <label>
-            <!-- <span>Color:</span> -->
             <input
               type="radio"
               name="color"
@@ -76,7 +75,6 @@
             ></div>
           </label>
           <label>
-            <!-- <span></span> -->
             <input
               type="radio"
               name="color"
@@ -90,7 +88,6 @@
             ></div>
           </label>
           <label>
-            <!-- <span></span> -->
             <input
               type="radio"
               name="color"
@@ -98,19 +95,19 @@
               [(ngModel)]="selectedColor"
               (ngModelChange)="updateSizeBoxColor()"
             />
-            <!-- <div class="check"></div> -->
             <div
               class="color-box3"
               [ngClass]="{ selected: selectedColor === 'green' }"
             ></div>
           </label>
         </div>
-        <div>
-          <h2>PRICE:</h2>
-          <p>{{ selectedProduct?.amount }}</p>
-        </div>
+        
         <button type="submit" routerLink="/product-cart">add to cart</button>
       </form>
+      <div class="amt">
+        <h2>PRICE:</h2>
+      <p >{{ selectedProduct?.amount }}</p>
+      </div>
       <p class="bottom">
         Find stunning women's cocktail dresses and party dresses. Stand out in
         lace and metallic cocktail dresses and party dresses from all your

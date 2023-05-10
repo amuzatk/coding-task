@@ -3,8 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Syne", "Poppins", sans-serif;
-  /* font-family: 'Lora', serif; */
-  /* font-family: 'Raleway'; */
 }
 
 body {
@@ -41,11 +39,9 @@ body {
   object-fit: cover;
 }
 .section-2 {
-  /* border: 1px solid rgb(17, 0, 255); */
   width: 35%;
 }
 .space {
-  /* border: 2px solid rgb(51, 255, 0); */
   width: 74%;
   height: 100%;
 }
@@ -84,14 +80,24 @@ form {
   flex-direction: column;
   gap: 2rem;
 }
-form h2 {
+form h2{
   width: 38px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   height: 18px;
-  color: #1d1f22;
+  color: #221d1e;
   margin-bottom: -16px;
+}
+
+.amt h2 {
+  width: 38px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  height: 18px;
+  color: #221d1e;
+  margin-top: 25px;
 }
 
 .rad label {
@@ -114,7 +120,6 @@ label span {
   width: 70px;
   height: 50px;
   background-color: #eee;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -197,7 +202,7 @@ label input[type="checkbox"]:checked + span {
   border: 2px solid red;
 }
 
-form p {
+form p, .amt p {
   position: absolute;
   width: 86px;
   height: 46px;
@@ -236,12 +241,9 @@ form p {
 
  .bottom{
     position: absolute;
-    /* width: 292px; */
     width: 23%;
     height: 103px;
-    /* left: calc(50% - 292px/2 + 355px); */
     bottom: -120px;
-    /* top: 4rem; */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
