@@ -42,46 +42,25 @@ import { CartServiceService } from 'src/app/cart-service.service';
   }
 
   ngOnInit() {
+
+    const firstBox = document.querySelector('.wrapper');
+  if (firstBox) {
+    firstBox.classList.add('blur');
+  }
+
     this.cartServiceService.getCartData().then((data: any) => {
       this.cart = data;   
     });
-  //   this.cart = [
-  //     {
-  //       image: 'Image1.png',
-  //         text: "Client",
-  //         // text: 'Apollo Running Short',
-  //         amount: '$50.000'
-  //     },
-  //     {
-  //       image: 'Image2.png',
-  //       text: "Client",
-  //       amount: '$50.000'
-  //     },
-  //     {
-  //       image: 'Image3.png',
-  //       text: "Client",
-  //       amount: '$50.000'
-  //     },
-  //     {
-  //       image: 'Image4.png',
-  //       text: "Client",
-  //       amount: '$50.000'
-  //     },
-  //     {
-  //       image: 'Image1.png',
-  //       text: "Client",
-  //       amount: '$50.000'
-  //     },
-  //     {
-  //       image: 'Image3.png',
-  //       text: "Client",
-  //       amount: '$50.000'
-  //     },
-  // ];
+  
   }
 
   goToProductDetail(id: string) {
     this.router.navigate(['/detailed', id]);
   }
+
+  onClick(event: MouseEvent) {
+    event.stopPropagation();
+  }
+  
 
 }

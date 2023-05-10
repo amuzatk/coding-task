@@ -8,16 +8,8 @@ import { SelectItem } from 'primeng/api';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  capacity: any;
-  states: any;
-  // groupedCities: SelectItemGroup[];
-  // selectedCurrency = '$USD';
-  selectedCity: any;
-  info: any;
-  cart: any[] | undefined;
+  activeLink = 'home';
   counter = 0;
-
   selectedCurrency = { symbol: '$', code: '$USD' };
   selectOpen = false;
   currencies = ['$USD', '€EUR', '¥JPY'];
@@ -44,96 +36,15 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  toggleMenu(data: { infomation: any; show: boolean; }) {
-    console.log(data.infomation)
-    data.show = !data.show;
-  }
-
-  increment() {
-    this.counter++;
-  }
-
-  decrement() {
-    this.counter--;
-  }
-
   constructor(private router:Router) {
   }
 
   ngOnInit() {
-
-    this.cart = [
-      {
-        image: 'Image1.png',
-          text: "Client",
-          // text: 'Apollo Running Short',
-          amount: '$50.000'
-      },
-      {
-        image: 'Image2.png',
-        text: "Client",
-        amount: '$50.000'
-      },
-      {
-        image: 'Image3.png',
-        text: "Client",
-        amount: '$50.000'
-      },
-      {
-        image: 'Image4.png',
-        text: "Client",
-        amount: '$50.000'
-      },
-      {
-        image: 'Image1.png',
-        text: "Client",
-        amount: '$50.000'
-      },
-      {
-        image: 'Image3.png',
-        text: "Client",
-        amount: '$50.000'
-      },
-  ];
   }
 
-  test(){
-  this.info = [
-    {
-        name: "Client",
-        image: 'user.png',
-        show: false,
-        infomation: [
-       
-            {
-              id: 1,
-              name: "Add/Manage Client",
-              routeLink: "/admin/arc"
-            }
-        ],
-    },
-    {
-        name: "Payment Management",
-        image: 'user.png',
-        show: false,
-        infomation: [
-            {
-                id: 1,
-                name: "Payment Transaction",
-                routeLink: "/admin/payment/:id",
-            },
-        ],
-    },
-];
-}
+  setActiveLink(link: string) {
+    this.activeLink = link;
+  }
 
-
-}
-function loadCapacity() {
-  throw new Error('Function not implemented.');
-}
-
-function loadStates() {
-  throw new Error('Function not implemented.');
 }
 

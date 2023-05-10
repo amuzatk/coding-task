@@ -1,9 +1,12 @@
 <header>
   <nav>
     <ul>
-      <li><a routerLink="/">Women</a></li>
-      <li><a routerLink="/men">Men</a></li>
-      <li><a routerLink="/kids">Kids</a></li>
+      <li><a routerLink="/" [class.active]="activeLink === 'home'" (click)="setActiveLink('home')">Women</a></li>
+      <!-- <li><a routerLink="/">Women</a></li> -->
+      <li><a routerLink="/men" [class.active]="activeLink === 'men'" (click)="setActiveLink('men')">Men</a></li>
+        <li><a routerLink="/kids" [class.active]="activeLink === 'kids'" (click)="setActiveLink('kids')">Kids</a></li>
+      <!-- <li><a routerLink="/men">Men</a></li>
+      <li><a routerLink="/kids">Kids</a></li> -->
     </ul>
   </nav>
   <div class="right-1">

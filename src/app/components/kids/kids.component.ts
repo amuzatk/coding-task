@@ -50,4 +50,8 @@ export class KidsComponent implements OnInit{
   goToProductDetail(id: string) {
     this.router.navigate(['/detailed', id]);
   }
+  onClick(event: MouseEvent) {
+    event.stopPropagation();
+  }
+  
 }

@@ -25,6 +25,11 @@ export class WomenComponent implements OnInit {
   constructor(private router: Router, private cartServiceService: CartServiceService) {}
 
   ngOnInit() {
+    const firstBox = document.querySelector('.wrapper');
+    if (firstBox) {
+      firstBox.classList.add('blur');
+    }
+
     this.cartServiceService.getCartData().then((data: any) => {
       this.cart = data;   
     });
@@ -44,24 +49,13 @@ export class WomenComponent implements OnInit {
     this.counter--;
   }
 
-  // goToProductDetail(id: number) {
-  //   console.log('Navigating to product detail page with ID:', id);
-  //   this.router.navigate(['/detailed', id]);
-  // }
   goToProductDetail(id: string) {
     this.router.navigate(['/detailed', id]);
   }
+
+  onClick(event: MouseEvent) {
+    event.stopPropagation();
+  }
   
 
-  // goToProductDetail(id: number): void {
-  //   console.log('Navigating to product detail page with ID:', id);
-  //   console.log(id, this.cart, 'DDDIIII');
-  //   const url = `/detailed/${id}`;
-  //   this.router.navigateByUrl(url);
-  // }
-  // goToProductDetail(id: number): void {
-  //   this.router.navigate(['/product-detail', id], { state: { cart: this.cart } });
-  //   console.log(id, 'DDDIIII');
-  //   console.log('clicked', 'DDDIIII');
-  // }
 }

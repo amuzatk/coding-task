@@ -1,18 +1,18 @@
 <body>
-    <h1>Category name</h1>
-    <main>
-      <ng-container *ngFor="let detail of cart; let i = index;" (click)="goToProductDetail(detail.id)">
-        <section>
-          <div class="wrapper"  [routerLink]="['/detailed', detail.id]">
-            <div class="image-container" >
-              <img class="show" src="/assets/{{detail.image}}" alt="">
-              <img class="hide" src="/assets/{{detail.common}}" alt="">
-            </div>
-            <p class="text">{{detail.text}}</p>
-            <p class="no-stock">{{detail.stock}}</p>
-            <p class="amount">{{detail.amount}}</p>
+  <h1>Category name</h1>
+  <main>
+    <ng-container *ngFor="let detail of cart; let i = index;" (click)="goToProductDetail(detail.id)">
+      <section>
+        <div class="wrapper" [ngClass]="{'blur': i === 2, 'hover-effect': i !== 2, 'third-box': i === 2}" [routerLink]="i !== 2 ? ['/detailed', detail.id] : null">
+          <div class="image-container" >
+            <img class="show" src="/assets/{{detail.image}}" alt="">
+            <img class="hide" src="/assets/{{detail.common}}" alt="">
           </div>
-        </section>
-      </ng-container>
-    </main>
-  </body>
+          <p class="text">{{detail.text}}</p>
+          <p class="no-stock" (click)="onClick($event)">{{detail.stock}}</p>
+          <p class="amount">{{detail.amount}}</p>
+        </div>
+      </section>
+    </ng-container>
+  </main>
+</body>

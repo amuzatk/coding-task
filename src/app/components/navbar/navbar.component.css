@@ -29,13 +29,20 @@ nav {
    left: 11rem;
   }
 
-  nav ul li a:hover,
+  nav ul li a.active {
+    border-bottom: 2px solid #5ece7b;
+    padding-bottom: 2rem;
+    color: #5ece7b;
+    font-weight: 600;
+  }
+  
+  /* nav ul li a:hover,
 nav ul li a:focus {
   border-bottom: 2px solid #5ece7b;
   padding-bottom: 2rem;
   color: #5ece7b;
   font-weight: 600;
-}
+} */
 
 nav > ul {
   display: flex;
