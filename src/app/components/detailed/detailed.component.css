@@ -190,7 +190,7 @@ label input[type="checkbox"]:checked + span {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  margin: 12px 19px;
+  margin: 8px 19px;
 }
 
 .radi input {

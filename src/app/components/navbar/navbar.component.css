@@ -8,7 +8,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding-top: 18px;
+  padding-top: 25px;
   padding-left: 3rem;
   position: relative;
 
@@ -28,6 +28,14 @@ nav {
    position: absolute;
    left: 11rem;
   }
+
+  nav ul li a:hover,
+nav ul li a:focus {
+  border-bottom: 2px solid #5ece7b;
+  padding-bottom: 2rem;
+  color: #5ece7b;
+  font-weight: 600;
+}
 
 nav > ul {
   display: flex;
@@ -49,20 +57,6 @@ nav > ul > li a {
   line-height: 120%;
   text-transform: uppercase;
 }
-
-nav li:first-child a {
-  border-bottom: 2px solid #5ece7b;
-  padding-bottom: 2rem;
-  color: #5ece7b;
-}
-
-nav li a:hover,
-nav li a.active {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #5ece7b;
-  color: #5ece7b;
-}
-
   .select-wrapper {
     position: relative;
     border: none;
@@ -81,18 +75,10 @@ nav li a.active {
   }
   .currency-options li{
 list-style: none;
-/* width: 114px;
-height: 45px;
-left: 1248px;
-top: 127px;
-background: #EEEEEE; */
   }
   .currency-options li:hover{
     list-style: none;
-    width: 100px;
-    height: 45px;
-    left: 1248px;
-    top: 127px;
+    width: 85px;
     background: #EEEEEE;
       }
 

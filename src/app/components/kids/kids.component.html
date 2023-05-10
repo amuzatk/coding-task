@@ -1,14 +1,16 @@
 <body>
   <h1>Category name</h1>
   <main>
-    <ng-container *ngFor="let detail of cart">
+    <ng-container *ngFor="let detail of cart; let i = index;" (click)="goToProductDetail(detail.id)">
       <section>
-        <div class="wrapper">
+        <div class="wrapper"  [routerLink]="['/detailed', detail.id]">
           <div class="image-container" >
-            <img src="/assets/{{detail.image}}" alt="">
+            <img class="show" src="/assets/{{detail.image}}" alt="">
+            <img class="hide" src="/assets/{{detail.common}}" alt="">
           </div>
-          <p>{{detail.text}}</p>
-          <h4>{{detail.amount}}</h4>
+          <p class="text">{{detail.text}}</p>
+          <p class="no-stock">{{detail.stock}}</p>
+          <p class="amount">{{detail.amount}}</p>
         </div>
       </section>
     </ng-container>
