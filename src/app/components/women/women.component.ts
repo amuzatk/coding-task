@@ -17,6 +17,7 @@ export class WomenComponent implements OnInit {
   selectedCity: any;
   info: any;
   cart: any;
+  image: any;
   counter = 0;
   selectOpen = false;
   // cartServiceService: any;

@@ -4,20 +4,20 @@
         <section>
           <div class="wrapper">
             <div class="image-container">
-              <img src="/assets/{{ selectedProduct.image }}" alt="Product Image" *ngFor="let i of [0, 1, 2]"/>
+              <img src="/assets/{{ selectedProduct?.image }}" alt="Product Image" *ngFor="let i of [0, 1, 2]"/>
             </div>
           </div>
         </section>
     </div>
     <div class="left-2">
-      <img src="/assets/{{ selectedProduct.image }}" alt="" />
+      <img src="/assets/{{ selectedProduct?.image }}" alt="" />
     </div>
   </div>
   <div class="section-2">
     <div class="space">
       <div class="top">
-        <h1>{{ selectedProduct.text.split(' ')[0] }}</h1>
-        <p>{{ selectedProduct.text.split(' ').slice(1).join(' ') }}</p>
+        <h1>{{ selectedProduct?.text.split(' ')[0] }}</h1>
+        <p>{{ selectedProduct?.text.split(' ').slice(1).join(' ') }}</p>
       </div>
       <form #sizeForm="ngForm" (ngSubmit)="onSubmit(sizeForm.value)">
         <div class="rad">
@@ -107,7 +107,7 @@
         </div>
         <div>
           <h2>PRICE:</h2>
-          <p>{{ selectedProduct.amount }}</p>
+          <p>{{ selectedProduct?.amount }}</p>
         </div>
         <button type="submit" routerLink="/product-cart">add to cart</button>
       </form>

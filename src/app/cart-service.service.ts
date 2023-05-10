@@ -8,8 +8,6 @@ import { CartData, CartItem } from './cart-data.model';
 })
 export class CartServiceService {
 
-  //  cartDataUrl = '/assets/items.json'
-
   constructor(private http: HttpClient) { }
 
   getCartData() {
@@ -18,12 +16,6 @@ export class CartServiceService {
     .then(res => res.cart as any)
     .then(data => data);
   }
-
-  // getCartItemById(itemId: string): Observable<CartItem> {
-  //   return this.getCartData().pipe(
-  //     map((cartItems: CartItem[]) => cartItems.find(item => item.id === itemId))
-  //   );
-  // }
 
   getCartItemById(itemId: string): Observable<CartItem> {
    return this.http.get<any>('/assets/items.json').pipe(

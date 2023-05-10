@@ -39,6 +39,7 @@ export class DetailedComponent implements OnInit {
   }
   // itemId: number;
   item: any;
+  image: any;
   ngOnInit(): void {
     this.getItemById(this.route.snapshot.paramMap.get('id') || '')
   
@@ -48,20 +49,20 @@ export class DetailedComponent implements OnInit {
       console.log(id, data);
     });
 
-    this.cart = [
-      {
-        id: '1',
-        image: 'Image1B.png',
-      },
-      {
-        id: '2',
-        image: 'Image1.png',
-      },
-      {
-        id: '3',
-        image: 'Image1.png',
-      },
-    ];
+    // this.cart = [
+    //   {
+    //     id: '1',
+    //     image: 'Image1B.png',
+    //   },
+    //   {
+    //     id: '2',
+    //     image: 'Image1.png',
+    //   },
+    //   {
+    //     id: '3',
+    //     image: 'Image1.png',
+    //   },
+    // ];
   }
 
   getItemById(id: string): void {
