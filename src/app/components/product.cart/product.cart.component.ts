@@ -12,6 +12,7 @@ export class ProductCartComponent {
 
   sizeBoxColor: string = ''; // Define a sizeBoxColor property with an empty string as its initial value.
 
+  currency = { symbol: '$', exchangeRate: 1 };
 
   onSubmit(formData: any) {
     console.log(formData);
@@ -32,5 +33,10 @@ export class ProductCartComponent {
         this.sizeBoxColor = '';
     }
   }
+
+  onCurrencyChanged(event: { currencySymbol: string, exchangeRate: number }) {
+    this.currency = { symbol: event.currencySymbol, exchangeRate: event.exchangeRate };
+  }
+  
 
 }

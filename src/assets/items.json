@@ -5,14 +5,14 @@
         "image": "Image1.png",
         "common": "Cart5.png",
         "text": "Apollo Running Short",
-        "amount": "$50.00"
+        "amount": "50.00"
       },
       {
         "id": "2",
         "image": "Image2.png",
         "common": "Cart5.png",
         "text": "Apollo Running Short",
-        "amount": "$50.00"
+        "amount": "50.00"
       },
       {
         "id": "3",
@@ -20,28 +20,28 @@
         "common": "Cart5.png",
         "text": "Apollo Running Short",
         "stock": "OUT OF STOCK",
-        "amount": "$50.00"
+        "amount": "50.00"
       },
       {
         "id": "4",
         "image": "Image4.png",
         "common": "Cart5.png",
         "text": "Apollo Running Short",
-        "amount": "$50.00"
+        "amount": "50.00"
       },
       {
         "id": "5",
         "image": "Image1.png",
         "common": "Cart5.png",
         "text": "Apollo Running Short",
-        "amount": "$50.00"
+        "amount": "50.00"
       },
       {
         "id": "6",
         "image": "Image3.png",
         "common": "Cart5.png",
         "text": "Apollo Running Short",
-        "amount": "$50.00"
+        "amount": "50.00"
       }
     ]
   }

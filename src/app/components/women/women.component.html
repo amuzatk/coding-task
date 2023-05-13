@@ -1,3 +1,5 @@
+<app-navbar (currencyChanged)="onCurrencyChanged($event)"></app-navbar>
+
 <body>
   <h1>Category name</h1>
   <main>
@@ -10,9 +12,10 @@
           </div>
           <p class="text">{{detail.text}}</p>
           <p class="no-stock" (click)="onClick($event)">{{detail.stock}}</p>
-          <p class="amount">{{detail.amount}}</p>
+          <p class="amount">{{ currency.symbol }}{{ detail.amount * currency.exchangeRate }} </p>
         </div>
       </section>
     </ng-container>
   </main>
 </body>
+

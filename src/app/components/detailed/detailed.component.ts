@@ -9,27 +9,8 @@ import { CartServiceService } from 'src/app/cart-service.service';
   styleUrls: ['./detailed.component.css']
 })
 export class DetailedComponent implements OnInit {
-  // selectedProduct: any;
-  // cart: any;
+  currency = { symbol: '$', exchangeRate: 1 };
 
-  // constructor(private route: ActivatedRoute) { }
-
-  // ngOnInit(): void {
-  //   const id = this.route.snapshot.paramMap.get('id');
-  //   this.selectedProduct = this.cart[id];
-  // }
-
-  // selectedProduct: any;
-  // cart: any[];
-  
-  // constructor(private route: ActivatedRoute) { }
-
-  // ngOnInit(): void {
-  //   const id = this.route.snapshot.paramMap.get('id');
-  //   const state = window.history.state;
-  //   this.cart = state.cart;
-  //   this.selectedProduct = this.cart[id];
-  // }
   itemId: number | undefined ;
   selectedProduct: any;
   cart: any[] ; // Initialize the cart property with an empty array
@@ -63,6 +44,9 @@ export class DetailedComponent implements OnInit {
     //     image: 'Image1.png',
     //   },
     // ];
+  }
+  onCurrencyChanged(event: { currencySymbol: string, exchangeRate: number }) {
+    this.currency = { symbol: event.currencySymbol, exchangeRate: event.exchangeRate };
   }
 
   getItemById(id: string): void {

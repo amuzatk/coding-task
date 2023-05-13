@@ -22,6 +22,10 @@ export class WomenComponent implements OnInit {
   selectOpen = false;
   // cartServiceService: any;
   // cart: any[];
+  currency = { symbol: '$', exchangeRate: 1 };
+  details: any;
+  // currency: any;
+
 
   constructor(private router: Router, private cartServiceService: CartServiceService) {}
 
@@ -36,7 +40,10 @@ export class WomenComponent implements OnInit {
     });
   }
 
- 
+  onCurrencyChanged(event: { currencySymbol: string, exchangeRate: number }) {
+    this.currency = { symbol: event.currencySymbol, exchangeRate: event.exchangeRate };
+  }
+  
 
   toggleSelect() {
     this.selectOpen = !this.selectOpen;
