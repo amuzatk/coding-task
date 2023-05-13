@@ -12,7 +12,8 @@
           </div>
           <p class="text">{{detail.text}}</p>
           <p class="no-stock" (click)="onClick($event)">{{detail.stock}}</p>
-          <p class="amount">{{ currency.symbol }}{{ detail.amount * currency.exchangeRate }} </p>
+          <p class="amount">{{ currency.symbol }}{{ detail.amount * currency.exchangeRate | number:'1.2-2' }} </p>
+          <!-- <p class="amount">{{ currency.symbol }}{{ detail.amount * currency.exchangeRate }} </p> -->
         </div>
       </section>
     </ng-container>

@@ -19,6 +19,7 @@ import { CartServiceService } from 'src/app/cart-service.service';
   info: any;
   cart: any[] | undefined;
   counter = 0;
+  currency = { symbol: '$', exchangeRate: 1 };
 
   selectOpen = false;
 
@@ -52,6 +53,10 @@ import { CartServiceService } from 'src/app/cart-service.service';
       this.cart = data;   
     });
   
+  }
+
+  onCurrencyChanged(event: { currencySymbol: string, exchangeRate: number }) {
+    this.currency = { symbol: event.currencySymbol, exchangeRate: event.exchangeRate };
   }
 
   goToProductDetail(id: string) {

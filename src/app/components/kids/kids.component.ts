@@ -19,6 +19,7 @@ export class KidsComponent implements OnInit{
   info: any;
   cart: any[] | undefined;
   counter = 0;
+  currency = { symbol: '$', exchangeRate: 1 };
 
   selectOpen = false;
 
@@ -47,6 +48,9 @@ export class KidsComponent implements OnInit{
     });
   }
 
+  onCurrencyChanged(event: { currencySymbol: string, exchangeRate: number }) {
+    this.currency = { symbol: event.currencySymbol, exchangeRate: event.exchangeRate };
+  }
   goToProductDetail(id: string) {
     this.router.navigate(['/detailed', id]);
   }
