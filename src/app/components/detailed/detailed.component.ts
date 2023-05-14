@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { CartServiceService } from 'src/app/cart-service.service';
+// import { products } from '../products';
+import { Currency } from '../../currency';
+import { CurrencyService } from '../../currency-service.service';
 
 @Component({
   selector: 'app-detailed',
@@ -9,13 +12,15 @@ import { CartServiceService } from 'src/app/cart-service.service';
   styleUrls: ['./detailed.component.css']
 })
 export class DetailedComponent implements OnInit {
+  product: any;
+  currency2: Currency | undefined;
   currency = { symbol: '$', exchangeRate: 1 };
 
   itemId: number | undefined ;
   selectedProduct: any;
   cart: any[] ; // Initialize the cart property with an empty array
 
-  constructor(private route: ActivatedRoute, private cartServiceService: CartServiceService) { 
+  constructor(private route: ActivatedRoute, private cartServiceService: CartServiceService, private currencyService: CurrencyService) { 
     this.cart = [];
   }
   // itemId: number;
@@ -30,6 +35,10 @@ export class DetailedComponent implements OnInit {
       console.log(id, data);
     });
 
+    this.route.paramMap.subscribe(params => {
+      // this.product = products[+params.get('productId')];
+      this.currency = this.currencyService.selectedCurrency;
+    });
     // this.cart = [
     //   {
     //     id: '1',
