@@ -9,6 +9,7 @@ body {
   margin: 6rem 3rem;
   display: flex;
   flex-direction: row;
+  /* overflow: hidden; */
 }
 .section-1 {
   width: 65%;
@@ -63,7 +64,7 @@ body {
   position: absolute;
   width: 292px;
   height: 27px;
-  top: 180px;
+  top: 215px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
@@ -78,7 +79,7 @@ form {
   margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 form h2{
   width: 38px;
@@ -151,7 +152,7 @@ label input[type="checkbox"]:checked + span {
   display: inline-block;
   margin-right: 48px;
   position: absolute;
-  top: 395px;
+  top: 415px;
   right: 402px;
   background-color: #d3d2d5;
   background: #d3d2d5;
@@ -164,7 +165,7 @@ label input[type="checkbox"]:checked + span {
   margin-right: 20px;
   background-color: rgb(8, 8, 8);
   position: absolute;
-  top: 395px;
+  top: 415px;
   right: 389px;
 }
 .color-box3 {
@@ -173,7 +174,7 @@ label input[type="checkbox"]:checked + span {
   display: inline-block;
   background-color: #0f6450;
   position: absolute;
-  top: 395px;
+  top: 415px;
   right: 368px;
 }
 .color-box.selected {

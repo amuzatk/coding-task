@@ -1,22 +1,11 @@
-/* .ui-dialog {
-    left: auto;
-    right: 0;
-} */
-/* p-dialog.custom-dialog {
-    --dialog-left: 100px;
-  }
-   */
-
    .modal-overlay {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
+    top: 4rem;
+    right: 17px;
+    z-index: 999;
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px #ccc;
     padding: 20px;
+    width: 30%;
   }
   
   .modal-content {
@@ -29,7 +18,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.6);
+    /* background-color: rgba(0,0,0,0.6); */
+    /* background: rgba(57, 55, 72, 0.22); */
     z-index: 999;
   }
   
