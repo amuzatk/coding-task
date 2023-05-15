@@ -6,6 +6,7 @@ import { MenComponent } from './components/men/men.component';
 import { KidsComponent } from './components/kids/kids.component';
 import { DetailedComponent } from './components/detailed/detailed.component';
 import { ProductCartComponent } from './components/product.cart/product.cart.component';
+import { CartModalComponent } from './components/cart-modal/cart-modal.component';
 
 const routes: Routes = [
   { path: '', component: WomenComponent },

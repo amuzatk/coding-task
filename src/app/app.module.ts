@@ -5,6 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // import { GridModule } from 'ngx-bootstrap/grid';
 // import { GridModule } from 'ngx-bootstrap';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule }
+    from '@angular/platform-browser/animations';
+import { DialogService } from 'primeng/dynamicdialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +21,7 @@ import { MenComponent } from './components/men/men.component';
 import { KidsComponent } from './components/kids/kids.component';
 import { DetailedComponent } from './components/detailed/detailed.component';
 import { ProductCartComponent } from './components/product.cart/product.cart.component';
+import { CartModalComponent } from './components/cart-modal/cart-modal.component';
 
 @NgModule({
   schemas: [
@@ -28,17 +36,22 @@ import { ProductCartComponent } from './components/product.cart/product.cart.com
     KidsComponent,
     DetailedComponent,
     ProductCartComponent,
+    CartModalComponent,
   ],
   imports: [
     BrowserModule,
     DropdownModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
     // GridModule.forRoot()
     // GridModule
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

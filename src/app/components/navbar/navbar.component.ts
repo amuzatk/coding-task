@@ -1,8 +1,11 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 import { map } from 'rxjs';
+import { DialogService, DynamicDialogRef  } from 'primeng/dynamicdialog';
+import { CartModalComponent } from '../cart-modal/cart-modal.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +13,8 @@ import { map } from 'rxjs';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @ViewChild('yourButton') yourButton: any;
+  ref: DynamicDialogRef | undefined;
   // @Output() currencyChange = new EventEmitter<{ symbol: string, rate: number }>();
   @Output() currencyChanged = new EventEmitter<{ currencySymbol: string, exchangeRate: number }>();
 
@@ -22,30 +27,40 @@ export class NavbarComponent implements OnInit {
   selectedCurrency = { symbol: '$', code: '$USD' };
   selectOpen = false;
   currencies = ['$USD', '€EUR', '¥JPY'];
+  modalOpen = true;
 
-  constructor(private http: HttpClient,private router:Router) {
+  constructor(private dialogService:DialogService,private http: HttpClient,private router:Router, private modalService: NgbModal) {
   }
 
   ngOnInit() {
   }
 
+  // openModal() {
+  //   const ref = this.dialogService.open(CartModalComponent, {
+  //     contentStyle: {
+  //       closable: false,
+  //       'min-height': '500px',
+  //       'width': '400px',
+  //       'border': '1px solid red',
+  //       'position': 'relative',
+  //       'top': '0rem',
+  //       'left': '28rem',
+  //     }
+  //   });
+  // }
+
+  openModal() {
+    const modalRef = this.modalService.open(CartModalComponent);
+    modalRef.componentInstance.name = 'Custom Modal';
+  }
+
+  toggleModal() {
+    this.modalOpen = this.modalOpen;
+  }
+  
   toggleSelect() {
     this.selectOpen = !this.selectOpen;
   }
-
-  // selectCurrency(currency: string) {
-  //   this.selectedCurrency = { symbol: this.getCurrencySymbol(currency), code: currency };
-  //   this.selectOpen = false;
-  //   console.log(currency,'CCOOR');
-  // }
-
-  // selectCurrency(currency: string) {
-  //   this.getExchangeRate(currency).subscribe((rate: number) => {
-  //     this.selectedCurrency = { symbol: this.getCurrencySymbol(currency), code: currency };
-  //     this.currencyChange.emit({ symbol: this.selectedCurrency.symbol, rate: rate });
-  //     this.selectOpen = false;
-  //   });
-  // }
 
   selectCurrency(currency: string) {
     this.getCurrencyExchangeRate(currency).subscribe((exchangeRate) => {
@@ -68,21 +83,10 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  // private getExchangeRate(currencyCode: string) {
-  //   return this.http.get(`https://api.exchangerate-api.com/v4/latest/${currencyCode.substr(1)}`).pipe(
-  //     map((response: any) => response.rates['USD'])
-  //   );
-  // }
-
   getCurrencyExchangeRate(currencyCode: string) {
     console.log(currencyCode, 'yyyy');
-    
-    // https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9
+
     const apiKey = 'https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9';
-    // const apiKey = '176418c128004179a94e1e858c605ae9';
-    // const url = `https://openexchangerates.org/api/latest.json?base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
-    // const url = `https://api.exchangeratesapi.io/latest?base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
-    // const url = `https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9`;
     const url = `https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9&base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
   
     return this.http.get(url).pipe(map((response: any) => response.rates[currencyCode.substr(1)]));
