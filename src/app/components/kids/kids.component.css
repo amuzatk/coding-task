@@ -7,149 +7,13 @@
   /* font-family: 'Raleway'; */
 }
 
-header {
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  padding: 1rem 2rem;
-}
-
-nav {
-  flex: 1;
-  /* border: 1px solid blue; */
-}
-
-.right {
-  /* border: 1px solid black; */
-  flex: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 6rem;
-}
-
-nav > ul {
-  /* border: 1px solid green; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  list-style: none;
-}
-
-nav > ul > li a {
-  text-decoration: none;
-  width: 65px;
-  height: 20px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-  text-transform: uppercase;
-  /* color: red; */
-  /* color: #5ECE7B; */
-}
-
-nav li:first-child a {
-  border-bottom: 2px solid #5ece7b;
-  padding-bottom: 2rem;
-  color: #5ece7b;
-}
-
-/* nav li a:hover:not(:first-child),
-  nav li a.active {
-  border-bottom: 2px solid  #5ECE7B;
-} */
-
-/* nav li a:hover:first-child {
-    border-bottom: none;
-  } */
-
-nav li a:hover,
-nav li a.active {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #5ece7b;
-  color: #5ece7b;
-}
-
-/* ul {
-    border: 1px solid red;
-    display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  } */
-
-.select-wrapper {
-  position: relative;
-  display: inline-block;
-  border: none;
-}
-
-.select-wrapper select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg"); */
-  background-position: right center;
-  background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg");
-  background-repeat: no-repeat;
-  background-size: 8px 8px;
-  padding-right: 32px;
-  /* border: 1px solid rgb(0, 255, 0); */
-}
-
-.select-wrapper .dropdown-icon {
-  border: 1px solid red;
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  /* color: record.quantity < '0' ? 'red' : '#171717', */
-  background-image: url("/assets/Dropdown.png");
-  /* background-image: url("/assets/UpArrow.png"); */
-  /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_down_24px.svg"); */
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: 8px 8px; */
-}
-
-.select-wrapper.open select {
-  border: 1px solid rgb(4, 0, 255);
-  background-image: url("/assets/UpArrow.png");
-  /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_up_24px.svg"); */
-  /* background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_up_24px.svg"); */
-}
-
-.select-wrapper.open .dropdown-icon {
-  background-image: url("https://cdn.jsdelivr.net/gh/google/material-design-icons/action/svg/design/ic_arrow_drop_up_24px.svg");
-  /* background-image: url("/assets/UpArrow.png"); */
-}
-
 body {
   /* border: 1px solid red; */
-  margin: 7rem 0rem;
+  margin: 4rem 0rem;
 }
 
-/* body h1{
-    border: 1px solid red;
-    margin-left: 49px;
-} */
 main {
-  /* border: 1px solid #23d56f; */
   margin: 113px 49px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-direction: row; */
-  /* display: grid;
-    grid-template-columns:min-content; */
-  /* grid-template-columns: 100px 150px 200px; */
   gap: 6rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20px, 330px));
@@ -205,18 +69,7 @@ main section h6 {
   height: 338px;
   /* object-fit: cover; */
   background: #ffffff;
-  /* border: 1px solid rgb(255, 0, 85); */
 }
-
-/* .wrapper:hover .hide {
-  display: block;
-  position: relative;
-  left: 18rem;
-  bottom: 25px;
-}
-.hide {
-  display: none;
-} */
 
 .wrapper.hover-effect:hover .hide {
   display: block;
@@ -244,11 +97,6 @@ main section h6 {
 .wrapper {
   cursor: pointer;
 }
-
-/* .wrapper.third-box {
-  background-color: rgba(128, 128, 128, 0.2);
-} */
-
 
 .wrapper.hover-effect:hover {
   display: flex;
