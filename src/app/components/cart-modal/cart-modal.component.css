@@ -1,4 +1,5 @@
    .modal-overlay {
+    /* overflow-y: auto; */
     position: fixed;
     top: 4rem;
     right: 17px;
@@ -9,6 +10,7 @@
   }
   
   .modal-content {
+    /* overflow-y: auto; */
     margin: auto;
   }
   
@@ -18,8 +20,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: rgba(0,0,0,0.6); */
-    /* background: rgba(57, 55, 72, 0.22); */
+    background-color: rgba(0,0,0,0.6);
+    /* background-color: rgba(57, 55, 72, 0.22); */
     z-index: 999;
   }
   

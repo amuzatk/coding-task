@@ -6,6 +6,7 @@ import { map } from 'rxjs';
 import { DialogService, DynamicDialogRef  } from 'primeng/dynamicdialog';
 import { CartModalComponent } from '../cart-modal/cart-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'src/environment/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -86,9 +87,9 @@ export class NavbarComponent implements OnInit {
   getCurrencyExchangeRate(currencyCode: string) {
     console.log(currencyCode, 'yyyy');
 
-    const apiKey = 'https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9';
-    const url = `https://openexchangerates.org/api/latest.json?app_id=176418c128004179a94e1e858c605ae9&base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
-  
+    const apiKey = environment.apiKey;
+    const url = `${apiKey}&base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
+
     return this.http.get(url).pipe(map((response: any) => response.rates[currencyCode.substr(1)]));
   }
   
