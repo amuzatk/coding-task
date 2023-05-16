@@ -88,7 +88,7 @@ export class NavbarComponent implements OnInit {
     console.log(currencyCode, 'yyyy');
 
     const apiKey = environment.apiKey;
-    const url = `${apiKey}&base=USD&symbols=${currencyCode.substr(1)}&access_key=${apiKey}`;
+    const url = `https://openexchangerates.org/api/latest.json?app_id=${apiKey}&base=USD&symbols=${currencyCode.substr(1)}`;
 
     return this.http.get(url).pipe(map((response: any) => response.rates[currencyCode.substr(1)]));
   }
